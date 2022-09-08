@@ -103,7 +103,7 @@ function App() {
         </div>
         <video src="images/sunnybeach.mp4" autoplay loop muted></video>
       </div>
-      <div id="sourcelink">
+      <div>
         <a href="/" target="_blank">
           Open-source code
         </a>
