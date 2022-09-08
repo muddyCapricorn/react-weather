@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
+import FormatDate from "./FormatDate";
 
 function Weather() {
   let [weather, setWeather] = useState({ ready: false });
@@ -14,7 +15,7 @@ function Weather() {
     let weather = {
       ready: true,
       city: response.data.name,
-      day: "Mon",
+      day: new Date(response.data.dt * 1000),
       time: "10:09",
       img: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       temperature: response.data.main.temp,
@@ -43,9 +44,7 @@ function Weather() {
             </div>
             <div className="col-2 today">
               <p>
-                {weather.day}
-                <br />
-                {weather.time}
+                <FormatDate date={weather.day} />
               </p>
             </div>
             <div className="col-1">
