@@ -49,7 +49,7 @@ function App() {
           <div className="row temp-today">
             <div className="col-5">
               <h2 className="now°">
-                <img src={weatherData.img} className="emoji-now"></img>
+                <img src={weatherData.img} alt="icon" className="emoji-now"></img>
                 <span className="temp-now">{weatherData.temperature}</span>°
               </h2>
               <span className="choose-param">
